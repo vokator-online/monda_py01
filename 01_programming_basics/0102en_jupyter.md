@@ -50,3 +50,53 @@ After successfull installation, your code cell will execute flawlessly and resul
 1. Saving and sharing: You can save your Jupyter Notebook just like any other file in VS Code. It will be saved with a .ipynb extension. You can also share the .ipynb file with others, and they can open and run it in their own Jupyter Notebook environment.
 
 1. Notebook kernels: Jupyter Notebook supports multiple programming languages through different kernels. You can change the kernel associated with a notebook using the Kernel menu in the toolbar. This allows you to work with languages other than Python, such as R or Julia.
+
+---
+
+## Chicken or Egg problem: 🐔?🥚
+
+Most of the content below now will not make sens to you yet, but this knowledge will be essential for you later in practice. Just remember to come back here to recap once you will actually start using Jupyter Notebook in VS Code.
+
+---
+
+## Restarting the Kernel
+
+While working in a Jupyter Notebook, sometimes the kernel (the execution environment) can hang or become unresponsive. In VS Code, you can quickly restart the kernel by:
+
+- Clicking the `Restart`/`Restart Kernel` button (usually represented by a circular arrow) at the top of the notebook interface.
+![Visual clue where is Restart button](img/jupyter_restart_kernel.png)
+
+- Using the Command Palette (`Ctrl+Shift+P` or `View > Command Palette`) and selecting `Jupyter: Restart Kernel`.
+
+Restarting the kernel can resolve issues related to variable conflicts, stuck computations, and more.
+
+## Displaying line numbers in code cells.
+
+It is sometimes convenient, especially in large code blocks, to have line numbers visible by the code line. However, please be careful not to consider them as a part of the code. You can turn on Line Numbers from extended Jupyter toolbar menu (`...`) just right of that `Restart` button.
+![Jupyter Line Numbers toggle](img/jupyter_line_numbers.png)
+
+## Displaying Image and Visualization Libraries
+
+Jupyter Notebook supports integration with popular Python visualization libraries like Matplotlib, Seaborn, Plotly, and more. When you generate plots or visualizations using these libraries in a Jupyter Notebook within VS Code, the outputs are rendered inline below the code cells. This makes it easy to see the results of your data analysis and visualization efforts in real-time. It will prove essential in our data science course.
+
+## Variable Explorer and Data Viewer
+
+The Jupyter extension for VS Code includes a variable explorer and a data viewer. This allows you to inspect the values of variables, dataframes, and other data structures within your notebook. It's an excellent tool for quickly understanding the shape and contents of your data. 
+
+To access the variable explorer, in the extended Jupyter toolbar menu (`...`) just right of that `Restart` button, there is also `Variables` option.
+![Jupyter Variable Explorer toggle](img/jupyter_variable_explorer.png)
+
+## Debugging Jupyter Code Cells
+
+VS Code allows for debugging Jupyter code cells, making it easier to troubleshoot issues in your notebook. To start debugging:
+
+Click on the `Debug Cell` icon (usually represented by a bug and play icon combined) in the top left of a code cell.
+The debugger will start, and you can set breakpoints, inspect variable values, and step through the code.
+
+## Keyboard Shortcuts in Jupyter
+
+There is a good article clearly explaining the [Jupyter keyboard shortcuts](https://towardsdatascience.com/jypyter-notebook-shortcuts-bf0101a98330), and all of them work in VS Code environment.
+
+## Conclusion
+
+Integrating Jupyter Notebook within the VS Code environment provides a potent combination of interactivity, visualization, and the robust features of a professional IDE. Whether you're analyzing data, building machine learning models, or just prototyping some ideas, this setup can enhance your productivity and streamline your development process.
