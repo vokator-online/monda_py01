@@ -1,1 +1,953 @@
-
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Basic logic in Python"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Conditionals"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Conditionals are statements in programming that allow you to make decisions based on certain conditions. They allow your code to perform different actions based on whether a condition is true or false. Conditionals are the foundation for decision-making in programs.\n",
+    "\n",
+    "In Python, conditionals are mainly achieved using `if`, `elif` (short for 'else if'), and `else` statements. They follow a specific syntax:\n",
+    "\n",
+    "```Python\n",
+    "if condition:\n",
+    "    # code to execute when the condition is true\n",
+    "\n",
+    "elif condition:\n",
+    "    # code to execute when the previous condition is false and this condition is true\n",
+    "\n",
+    "else:\n",
+    "    # code to execute when none of the previous conditions are true\n",
+    "```\n",
+    "\n",
+    "Here's a breakdown of how conditionals work:\n",
+    "\n",
+    "1. The `if` statement checks a given condition. If the condition is true, the code inside the block following the `if` statement is executed.\n",
+    "\n",
+    "2. Optionally, you can include one or more `elif` statements after the `if` statement. These statements also check condition, but only if the preceding conditions in the `if` and other `elif` statements are false. If condition evaluates to true, the code inside the corresponding `elif` block is executed.\n",
+    "\n",
+    "3. If none of the conditions in the `if` and `elif` statements are true, the program executes the code inside the `else` block (if provided), as it acts as a catch-all."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Comparison Operators\n",
+    "\n",
+    "Comparison operators are used to compare two values or expressions and evaluate their relationship. They return either True or False based on the result of the comparison. These operators are often used within conditionals to check conditions and determine the flow of the program.\n",
+    "\n",
+    "Below are some of the commonly used comparison operators in Python:\n",
+    "\n",
+    "- Equal to (`==`): Checks if the values on both sides are equal.\n",
+    "- Not equal to (`!=`): Checks if the values on both sides are not equal.\n",
+    "- Greater than (`>`): Checks if the value on the left is greater than the value on the right.\n",
+    "- Less than (`<`): Checks if the value on the left is less than the value on the right.\n",
+    "- Greater than or equal to (`>=`): Checks if the value on the left is greater than or equal to the value on the right.\n",
+    "- Less than or equal to (`<=`): Checks if the value on the left is less than or equal to the value on the right.\n",
+    "\n",
+    "You can use these comparison operators within conditionals to make decisions based on their results. Example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "age = 25"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "You're eligible.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# conditional code snippet\n",
+    "if age < 18:\n",
+    "    print(\"You're too young for this.\")\n",
+    "elif age >= 18 and age <= 65:\n",
+    "    print(\"You're eligible.\")\n",
+    "else:\n",
+    "    print(\"You're too old for this.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In this example, depending on the value of `age`, different messages are displayed to the user. If `age < 18`, it prints \"You're too young for this.\", if `age` falls between 18 and 65 (inclusive), it prints \"You're eligible.\", and if none of the conditions are met, it prints \"You're too old for this.\"."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick assignment 1\n",
+    "\n",
+    "Set the `age` to 71 and run again the conditional code snippet, then try with 42. Is the result different? What about 15?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick assignment 2\n",
+    "\n",
+    "Create two variables and assign numbers to them. Compare them by using conditionals and print the statement if they are equal or not."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick assignment 3\n",
+    "\n",
+    "Assign the number to a variable, then print the statement if the number is odd or even."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## Boolean type variables"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In programming, the Boolean data type is used to represent logical values. It has two possible values: True and False. Booleans are often used in conditionals, loops, and other control structures to control the flow of a program based on the evaluation of conditions.\n",
+    "\n",
+    "In Python, you can assign boolean values to variables using the keywords `True` and `False` (note that they must be capitalized). For example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "<class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_raining = True\n",
+    "print(is_raining)\n",
+    "print(type(is_raining))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False <class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "has_finished = False\n",
+    "print(has_finished, type(has_finished))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Boolean variables can be created by assigning the result of a comparison using comparison operators. For instance:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "age = 25\n",
+    "is_adult = age >= 18\n",
+    "print(is_adult) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In this example, the comparison `age >= 18` evaluates to `True`, and this boolean value is assigned to the variable `is_adult`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick assignment 4\n",
+    "\n",
+    "Assign a number to a variable.\n",
+    "\n",
+    "Then, check if that number is positive, and assign the result to the variable `is_positive`\n",
+    "\n",
+    "Then, print the human readable statement describing that the given number is either positive or negative."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Food for thought: is 0 positive or negative?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Some more important points about Booleans\n",
+    "\n",
+    "- True represents a condition that is true or a value that is considered to be \"on\" or \"valid\". In practice, any variable of any type, which represents anything but `0` or `None`, is True.\n",
+    "- False represents a condition that is false or a value that is considered to be \"off\" or \"invalid\". In practice, any variable of any type, which represents `0` or `None`, is False.\n",
+    "- Booleans can be assigned to variables, passed as arguments, and used in expressions just like any other data type."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## Logical Operators"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "You can also combine boolean values using logical operators. The main logical operators in Python are:\n",
+    "\n",
+    "- `and`: Returns `True` if both operands are `True`, otherwise returns `False`.\n",
+    "- `or`: Returns `True` if at least one of the operands is `True`, otherwise returns `False`.\n",
+    "- `not`: Returns the opposite boolean value of the operand.\n",
+    "\n",
+    "Here's an example that demonstrates the use of logical operators:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "It's either sunny or warm.\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_sunny = True\n",
+    "is_warm = False\n",
+    "\n",
+    "if is_sunny and is_warm:\n",
+    "    print(\"It's sunny and warm!\")\n",
+    "elif is_sunny or is_warm:\n",
+    "    print(\"It's either sunny or warm.\")\n",
+    "else:\n",
+    "    print(\"It's neither sunny nor warm.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In this case, if both `is_sunny` and `is_warm` are true, it will print \"It's sunny and warm!\". If only one of them is true, it will print \"It's either sunny or warm.\". And if both are false, it will print \"It's neither sunny nor warm.\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Truth tables for the logical operators\n",
+    "\n",
+    "#### `and`\n",
+    "\n",
+    "| A     | B     | A `and` B |\n",
+    "|-------|-------|-----------|\n",
+    "| `True`  | `True`  | `True`    |\n",
+    "| `True`  | `False` | `False`   |\n",
+    "| `False` | `True`  | `False`   |\n",
+    "| `False` | `False` | `False`   |\n",
+    "\n",
+    "#### `or`\n",
+    "\n",
+    "| A     | B     | A `or` B  |\n",
+    "|-------|-------|----------|\n",
+    "| `True`  | `True`  | `True`   |\n",
+    "| `True`  | `False` | `True`   |\n",
+    "| `False` | `True`  | `True`   |\n",
+    "| `False` | `False` | `False`  |\n",
+    "\n",
+    "#### `not`\n",
+    "\n",
+    "| A     | `not` A |\n",
+    "|-------|---------|\n",
+    "| `True`  | `False`  |\n",
+    "| `False` | `True`   |\n",
+    "\n",
+    "These truth tables describe the basic behavior of these logical operators. When working with more complex expressions, understanding these fundamental behaviors will be crucial."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick assignment 5\n",
+    "\n",
+    "Set numeric values to two variables. Check if they are odd or even, and print a statement whether they are both odd, both even, or mixed. Test all scenarios to validate correctness of your code."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Some more examples of Boolean expressions and operations"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 10\n",
+    "y = 8"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_greater = x > y\n",
+    "print(is_greater)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_equal = x == y\n",
+    "print(is_equal)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_equal_10 = x == 10\n",
+    "print(is_equal)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "logical_and = is_greater and is_equal\n",
+    "print(logical_and)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "logical_or = is_greater or is_equal\n",
+    "print(logical_or)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "logical_not = not True\n",
+    "print(logical_not)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In these examples, we compare the values of `x` and `y` using comparison operators (`>`, `==`). The results of these comparisons are Boolean values (`True` or `False`). Then we perform logical operations (`and`, `or`, `not`) on these Boolean values to get the final results."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "### XOR (Exclusive OR) Operator:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "XOR returns True if exactly one of its operands is True and the other is False. If both operands are True or both are False, then XOR returns False.\n",
+    "\n",
+    "The `xor` operator, represented as `^` in Python (not to be confused with the power operation in other languages) and sometimes referred to as the \"exclusive or\".\n",
+    "\n",
+    "### Truth Table for XOR:\n",
+    "\n",
+    "| A     | B     | A `xor` B |\n",
+    "|-------|-------|-----------|\n",
+    "| `True`  | `True`  | `False`   |\n",
+    "| `True`  | `False` | `True`    |\n",
+    "| `False` | `True`  | `True`    |\n",
+    "| `False` | `False` | `False`   |\n",
+    "\n",
+    "In Python, the bitwise XOR operator is `^`, but keep in mind that it primarily operates on bits of integers. However, for the sake of boolean logic, it does act like the logical XOR when used with `True` and `False`.\n",
+    "\n",
+    "💡Note: The XOR operation is also commonly used in cryptography, bit manipulation tasks, and various other areas in computer science and electronics.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Practical Application Example: Light Switches\n",
+    "\n",
+    "Imagine you have a room with two entrances, and at each entrance, there's a switch to control the light in the room. The requirement is that flipping either switch should change the light's state. If the light is off and either switch is flipped, the light should turn on. If the light is on and either switch is flipped, the light should turn off. This is a classic example of how the `xor` operator works, and this kind of switch is sometimes referred to as a \"three-way switch\" in electrical parlance.\n",
+    "\n",
+    "In this Python representation:\n",
+    "\n",
+    "- We consider two switches: `switch_A` and `switch_B`.\n",
+    "- Initially, both are in the \"off\" position (`False`).\n",
+    "- If you flip `switch_A` (change its state from `False` to `True`), the light should turn on.\n",
+    "- If you then flip `switch_B` (change its state from `False` to `True`), the light should turn off, even though both switches are now in the \"on\" position.\n",
+    "\n",
+    "Let's see this in code:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Light: False\n",
+      "Light: True\n",
+      "Light: False\n"
+     ]
+    }
+   ],
+   "source": [
+    "switch_A = False  # Initial state: off\n",
+    "switch_B = False  # Initial state: off\n",
+    "\n",
+    "print(\"Light:\", switch_A ^ switch_B)\n",
+    "\n",
+    "# Scenario 1: Flip switch_A\n",
+    "switch_A = not switch_A\n",
+    "print(\"Light:\", switch_A ^ switch_B)\n",
+    "\n",
+    "# Scenario 2: Now, flip switch_B\n",
+    "switch_B = not switch_B\n",
+    "print(\"Light:\", switch_A ^ switch_B)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In the above example, the light's state is determined by the `xor` operation on the states of `switch_A` and `switch_B`. This emulates the behavior of two switches controlling a single light in a room."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick Assignment 6\n",
+    "\n",
+    "Check if airlock is safe to use. Airlock has two doors, which either can be open or closed."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## Order precedence"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "As with math operators, comparison and logical operators have their order precedence. These operators follow after math operators.\n",
+    "\n",
+    "- Comparison Operators: Comparison operators such as `<`, `>`, `<=`, `>=`, `==`, and `!=` are evaluated from left to right.\n",
+    "- Logical Operators: The logical operators `not`, `and`, and `or` are evaluated last.\n",
+    "\n",
+    "Examples:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "True or False and True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "not True == False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "big_number = 99\n",
+    "small_number = 1\n",
+    "\n",
+    "big_number > small_number \\\n",
+    "    and big_number + small_number == 100\n",
+    "\n",
+    "# tip: in Python we can use backslash `\\` to break \n",
+    "# the line in our code does not fit, without breaking\n",
+    "# the statement"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In case of `or` logical comparison, Python is designed to return the value of the first variable which is not False. Examples:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "0 or small_number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "99"
+      ]
+     },
+     "execution_count": 40,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "None or big_number"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick assignment 7\n",
+    "\n",
+    "Set 3 numeric variables. Check if the first variable is between the other two, try to optimize."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick assignment 8\n",
+    "\n",
+    "Set a variable with an integer value of a year. Now find if that year is leap year. It is every 4th year starting from 0, except every 100th year, but including every 400th year. For clarification and testing, years 1900 and 2100 are not leap years, while year 2000 was a leap year. Year 2023 is not a leap year, while year 2024 is."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "While there are many correct ways to solve the leap year problem, not all ar optimal, and most definitely there are many wrong ways."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## `pass` Statement"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "You can use `pass` statement in place of empty blocks. It is very useful to outline the code block architecture before filling in. Python, unlike other languages, does not tolerate empty code blocks.\n",
+    "\n",
+    "This example below shows how the code is only partially implemented to test the `is_raining` scenario:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      ".'.'.'.'.'\n",
+      ".'.'.'.'.'\n",
+      ".'.'.'.'.'\n",
+      ".'.'.'.'.'\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_sunny = False\n",
+    "is_raining = True\n",
+    "if is_sunny and is_raining:\n",
+    "    # print rainbow\n",
+    "    pass\n",
+    "elif is_sunny:\n",
+    "    # print sun\n",
+    "    pass\n",
+    "else:\n",
+    "    print(\".'.'.'.'.'\")\n",
+    "    print(\".'.'.'.'.'\")\n",
+    "    print(\".'.'.'.'.'\")\n",
+    "    print(\".'.'.'.'.'\")            "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Nested Conditionals"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In Python code blocks can be nested, and conditionals are the simpliest example to demonstrate this: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the sky cloudy\n",
+      "and it's raining\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_cloudy = True\n",
+    "is_raining = True\n",
+    "if is_cloudy:\n",
+    "    print('the sky cloudy')\n",
+    "    if is_raining:\n",
+    "        print('and it\\'s raining')\n",
+    "else:\n",
+    "    print('sun is shining')\n",
+    "    if is_raining:\n",
+    "        print('but it\\'s raining')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quick Assignment 9\n",
+    "\n",
+    "Reimplement leap year solution only by using nesting, without logical operators. Which way is easier to understand?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## Conclusion\n",
+    "\n",
+    "Booleans are fundamental in programming, especially in conditionals and loops, as they allow us to control the flow of our programs based on the truth or falsity of certain conditions."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## Additional Reading"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. **Official Python Documentation**:\n",
+    "    - [The `if` statement](https://docs.python.org/3/reference/compound_stmts.html#if): Detailed information on how the `if` statement works in Python.\n",
+    "    - [Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing): Learn more about how Python determines the truthiness or falsiness of various objects.\n",
+    "    - [Boolean Operations](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not): Dive deeper into Python's built-in boolean operations, including `and`, `or`, and `not`.\n",
+    "\n",
+    "2. **Interactive Tutorials**:\n",
+    "    - [LearnPython.org - Conditions](https://www.learnpython.org/en/Conditions): An interactive tutorial on Python conditions.\n",
+    "    - [Programiz - Python If...Else](https://www.programiz.com/python-programming/if-elif-else): A beginner-friendly guide to the `if`, `elif`, and `else` statements in Python.\n",
+    "\n",
+    "3. **Deep Dives**:\n",
+    "    - [Real Python - If Statements](https://realpython.com/python-conditional-statements/): A detailed exploration of conditional statements in Python, from basic `if` statements to more complex nested conditions.\n",
+    "    - [GeeksforGeeks - Python Logical Operators](https://www.geeksforgeeks.org/python-logical-operators-with-examples-improvement-needed/): An article explaining logical operators in Python with practical examples.\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "venv",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.12"
+  },
+  "orig_nbformat": 4
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
