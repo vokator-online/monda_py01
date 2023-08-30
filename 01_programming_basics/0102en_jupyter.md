@@ -34,14 +34,14 @@ To set up Jupyter Notebook in the VS Code IDE, follow these steps:
 
 1. Install the Jupyter extension: Open VS Code, go to the Extensions view (`Ctrl+Shift+X`/`Cmd+Shift+X` or `View` > `Extensions` in menu) and search for `Jupyter`. Install the Jupyter extension if not yet installed with Python.
 
-1. Create a new Jupyter Notebook: Open the Command Palette (`Ctrl+Shift+P` or `View` > `Command Palette`) and search for `Jupyter: Create New Blank Jupyter Notebook`. Select this option to create a new Jupyter Notebook file. Alternatively, you can just create an empty file in the File Browser and name it with extension `.ipynb`.
+2. Create a new Jupyter Notebook: Open the Command Palette (`Ctrl+Shift+P` or `View` > `Command Palette`) and search for `Jupyter: Create New Blank Jupyter Notebook`. Select this option to create a new Jupyter Notebook file. Alternatively, you can just create an empty file in the File Browser and name it with extension `.ipynb`.
 
-1. Select a kernel: After creating a new Notebook, you will be prompted to select a kernel. Choose your recently created virtual environment (`venv`) ![Kernel Selection](img/jupyter_kernel.png) and if prompted, allow access through Windows Firewall.
+3. Select a kernel: After creating a new Notebook, you will be prompted to select a kernel. Choose your recently created virtual environment (`venv`) ![Kernel Selection](img/jupyter_kernel.png) and if prompted, allow access through Windows Firewall.
 
-1. Execute code cells: In the newly created Jupyter Notebook, you can start writing and executing code cells with Ctrl+Enter shortcut or just pressing the triangle button on the left side of the code cell. Each code cell can be executed independently, and the output of the last code line will be displayed below the cell.
+4. Execute code cells: In the newly created Jupyter Notebook, you can start writing and executing code cells with Ctrl+Enter shortcut or just pressing the triangle button on the left side of the code cell. Each code cell can be executed independently, and the output of the last code line will be displayed below the cell.
 ![Jupyter Code Cell](img/jupyter_code_cell.png)
 
-1. You will be prompted to install Interactive Python and Jupyter modules into your Python Virtual Environment, if they are not yet there. Choose `Install` option. It may take some time, it may fail. In case of failure or error, you can retry by executing command `pip install ipykernel` in the Terminal, but first make sure virtual environment is activated.
+5. You will be prompted to install Interactive Python and Jupyter modules into your Python Virtual Environment, if they are not yet there. Choose `Install` option. It may take some time, it may fail. In case of failure or error, you can retry by executing command `pip install ipykernel` in the Terminal, but first make sure virtual environment is activated.
 ![Manual ipykernel installation](img/manual_ipykernel_installation.png)
 After successfull installation, your code cell will execute flawlessly and result will be outputed.
 
