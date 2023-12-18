@@ -64,7 +64,7 @@ PEP8 yra Python kodo rašymo taisyklių rinkinys, kuris padeda standartizuoti Py
 
 Kodas yra skirtas ne tik kompiuteriams, bet ir žmonėms. Komentarai yra svarbūs, kad kiti programuotojai galėtų lengviau suprasti, ką reiškia tam tikri kodo blokai, ką norite pasiekti su savo kodu. Komentarai taip pat gali padėti jums patiems, jei vėliau turėsite peržiūrėti savo kodą ir suprasti, ką jūs bandėte padaryti.
 
-Komentarai yra rašomi tarp simbolio `#`, o kai yra paleidžiamas kodas, viskas, kas yra tarp `#` ir eilutės pabaigos, yra ignoruojama. Komentarai taip pat gali būti naudojami kaip laikinas kodas, kurio nenorite paleisti, bet kurį norite laikyti savo faile.
+Komentarai yra rašomi po simbolio `#`, o kai yra paleidžiamas kodas, viskas, kas yra tarp `#` ir eilutės pabaigos, yra ignoruojama. Komentarai taip pat gali būti naudojami kaip laikinas kodas, kurio nenorite paleisti, bet kurį norite laikyti savo faile.
 
 ```Python
 # Čia mes apibrėžiame kintamuosius, kuriuos naudosime toliau
