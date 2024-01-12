@@ -26,6 +26,10 @@ class Recipe:
     def remove_ingredient(self, ingredient_id:int):
         self.ingredients.pop(ingredient_id)
 
+    def print_recipe(self):
+        for index, ingredient in enumerate(self.ingredients, start=1):
+            print(f"{index}, {ingredient}")
+
 
 class Fridge:
     contents = []
@@ -49,25 +53,45 @@ class Fridge:
             print(f"{name}x {quantity} was added to the fridge.")
 
     def remove_product(self, name:str, quantity:float):
+        self.print_contents()
+    
         product_id, product = self.check_product(name)
     
-        if product.quantity >= quantity:
-            product.quantity -= quantity
-            print(f"{quantity} {name} removed from the fridge.")
+        if product is not None:
+            if product.quantity >= quantity:
+                product.quantity -= quantity
+            print(f"{quantity} {name}(s) removed from the fridge.")
+            
+            if product.quantity == 0:
+                self.contents.pop(product_id)
+                print(f"{name} completely removed from the fridge.")
+            else:
+                print(f"Not enough {name} in the fridge.")
         else:
-            print(f"Not enough {name} in the fridge.")
             print(f"{name} not found in the fridge.")
 
-
     def print_contents(self):
-        pass
+        for index, line in enumerate(self.contents, start=1):
+            print(f"{index} - {line}")
 
-    def check_recipe(self, recipe:Recipe):
-        pass
+
+
+
+
+    def check_recipe(self, recipe: Recipe):
+        for ingredient in recipe.ingredients:
+            product_id, _ = Fridge().check_product(ingredient.name)
+            if product_id is None:
+                print(f"{ingredient.name} was not found in the fridge")
+                print("Recipe is not craftable")
+                return False
+        print("Recipe is craftable")
+        return True
 
 
 def main():
     fridge = Fridge()
+    recipe = Recipe()
 
     while True:
         print("\nWelcome to the fridge menu:\n\n")
