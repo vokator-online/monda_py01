@@ -1,0 +1,2 @@
+Labas, pasauli!
+Tai mano pirmasis failas Python kalboje.
